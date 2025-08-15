@@ -14,11 +14,8 @@
 ## Project structure
 
 > [!IMPORTANT]
-> [Team Planning](https://github.com/orgs/ISIS3510-202520/projects/1) (Project Planner)
-
-In this section you can find all the planning done by the group. From non-code related entries to code related features or #TODO's.
-
-> [!IMPORTANT]
-> [.github](https://github.com/ISIS3510-202520/.github) (Repository)
-
-In this repository you can find all the deliverables of the team (pdf, videos, audios, mockups) and the wiki of the project. In the wiki you will find a page that helps you navigate the repository and find the desired folder/file.
+> ### [Team Planning](https://github.com/orgs/ISIS3510-202520/projects/1) (Project Planner)
+> In this section you can find all the planning done by the group. From non-code related entries to code related features or #TODO's.
+> 
+> ### [.github](https://github.com/ISIS3510-202520/.github) (Repository)
+> In this repository you can find all the deliverables of the team (pdf, videos, audios, mockups) and the wiki of the project. In the wiki you will find a page that helps you navigate the repository and find the desired folder/file.
