@@ -1,4 +1,4 @@
-# ISIS3510 - Group 31
+# 🔵 ISIS3510 - Group 31
 
 ## Team members
 
