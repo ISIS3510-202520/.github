@@ -17,4 +17,4 @@
 In this section you can find all the planning done by the group. From non-code related entries to code related features or #TODO's.
 
 ### [📖 .github](https://github.com/ISIS3510-202520/.github) (Repository)
-In this repository you can find all the deliverables of the team (pdf, videos, audios, mockups) and the [wiki of the project](https://github.com/ISIS3510-202520/.github/wiki). In the [wiki](https://github.com/ISIS3510-202520/.github/wiki) you will find a page that helps you navigate the repository and find the desired folder/file.
+In this repository you can find all the deliverables of the team (pdf, videos, audios, mockups) and the [wiki](https://github.com/ISIS3510-202520/.github/wiki) of the project. In the [wiki](https://github.com/ISIS3510-202520/.github/wiki) you will find a page that helps you navigate the repository and find the desired folder/file.
