@@ -18,3 +18,9 @@ In this section you can find all the planning done by the group. From non-code r
 
 ### [📖 .github](https://github.com/ISIS3510-202520/.github) (Repository)
 In this repository you can find all the deliverables of the team (pdf, videos, audios, mockups) and the [wiki](https://github.com/ISIS3510-202520/.github/wiki) of the project. In the [wiki](https://github.com/ISIS3510-202520/.github/wiki) you will find a page that helps you navigate the repository and find the desired folder/file.
+
+### [🦋 Flutter](https://github.com/ISIS3510-202520/Flutter) (Repository)
+In this repository you can find all the branches and development of the Flutter version of the app. Provides the same functionality as the Kotlin application.
+
+### [🍀 Kotlin](https://github.com/ISIS3510-202520/Kotlin) (Repository) 
+In this repository you can find all the branches and development of the Kotlin version of the app. Provides the same functionality as the Flutter application.
