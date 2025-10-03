@@ -1,0 +1,25 @@
+@startuml
+title Journaling App - Component Diagram (AI from Frontend)
+
+' ========= COMPONENTS =========
+component "Mobile App (Android)" as App
+component "Firebase Authentication" as Auth
+component "Firestore Database" as Firestore
+component "Cloud Functions\n(Serverless Backend)" as Functions
+component "AI Summarizer Service" as AI
+component "Push Notifications\n(FCM)" as FCM
+component "External Emergency Services\n(Contacts / Hotlines)" as Emergency
+
+' ========= RELATIONSHIPS =========
+App --> Auth : Login / Password check
+App --> Firestore : CRUD on user data\n(journals, emotions, streaks, summaries)
+
+FCM --> App : Deliver reminders & streak notifications
+App --> Emergency : Trigger emergency button (dial/SMS)
+
+Firestore <..> Functions : Trigger-based updates\n(streak calculation only)
+Functions --> FCM : Send push notifications
+
+App --> AI : Request summaries directly\n(save results back in Firestore)
+
+@enduml

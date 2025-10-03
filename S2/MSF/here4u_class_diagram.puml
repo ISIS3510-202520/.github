@@ -1,0 +1,98 @@
+@startuml
+
+' ========= ENTITIES =========
+
+class User {
+  + uid : string
+  + email : string
+  + displayName : string
+  + createdAt : timestamp
+  + lastLogin : timestamp
+  + currentStreak : int
+  + longestStreak : int
+  + lastEntryDate : timestamp
+}
+
+class Emotion {
+  + id : string
+  + name : string
+  + description : string
+  + colorHex : string
+}
+
+class Journal {
+  + id : string
+  + userId : string
+  + emotionId : string
+  + description : str
+  + createdAt : timestamp
+  + sharedWithTherapist : bool
+}
+
+class Exercise {
+  + id : string
+  + title : string
+  + description : string
+  + flashcards: list
+}
+
+class Flashcard {
+  + id : string
+  + step: int
+  + title: string
+  + description: string
+  + durationSec : int
+  + mediaRef : string
+}
+
+class ExerciseSession {
+  + id : string
+  + userId : string
+  + exerciseId : string
+  + startedAt : timestamp
+  + completedAt : timestamp
+}
+
+class SummaryRequest {
+  + id : string
+  + userId : string
+  + startDate : timestamp
+  + endDate : timestamp
+  + generatedAt : timestamp
+  + summaryText : string
+}
+
+class EmergencyContact {
+  + id : string
+  + userId : string
+  + name : string
+  + phone: string
+  + email : string
+  + relation : string
+}
+
+class EmergencyRequest {
+  + id : string
+  + userId : string
+  + timestamp : timestamp
+  + location : geo
+  + contacted : list
+}
+
+' ========= RELATIONSHIPS =========
+
+User "1" --> "*" Journal
+User "1" --> "*" EmergencyContact
+User "1" --> "*" ExerciseSession
+User "1" --> "*" SummaryRequest
+User "1" --> "*" EmergencyRequest
+
+Journal "*" --> "1" Emotion
+
+ExerciseSession "1" --> "1" Exercise
+
+EmergencyRequest "1" --> "*" EmergencyContact
+
+Exercise "1" --> "*" Flashcard
+
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+title Journaling App - Deployment Diagram (Flutter + Kotlin)
+
+node "User Devices" as User {
+  node "Android Mobile Device" {
+    artifact "Flutter App" as FlutterApp
+  }
+  node "Android Mobile Device" {
+    artifact "Kotlin App" as KotlinApp
+  }
+}
+
+node "Firebase Cloud" {
+  node "Firebase Authentication" as Auth
+  node "Firestore Database" as Firestore
+  node "Firebase Cloud Functions" as Functions
+  node "Firebase Cloud Messaging (FCM)" as FCM
+}
+
+node "External Services" {
+  artifact "AI Summarizer API" as AI
+  artifact "Emergency Hotlines / University Counselors" as Emergency
+}
+
+' ========= CONNECTIONS =========
+User --> Auth : Login / Verify
+User --> Firestore : CRUD journaling data
+User --> FCM : Notifications
+User --> Emergency : Call/SMS links
+User --> AI : Summarization requests
+
+Functions --> Firestore : Triggers (streak calc, summaries)
+Functions --> FCM : Push notifications
+
+@enduml
