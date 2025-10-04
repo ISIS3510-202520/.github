@@ -1,5 +1,5 @@
 @startuml
-title Journaling App - Component Diagram (AI from Frontend)
+title Component Diagram - Here4U
 
 ' ========= COMPONENTS =========
 component "Mobile App (Android)" as App

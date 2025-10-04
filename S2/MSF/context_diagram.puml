@@ -1,0 +1,45 @@
+@startuml
+title Context Diagram - Here4U
+
+actor "End User" as User
+actor "Developer" as Dev
+actor "Analytics Persona\n(Data Analyst / PM)" as Analyst
+
+package "Mobile Applications" {
+  rectangle "Here4U App (Flutter)" as FlutterApp
+  rectangle "Here4U App (Kotlin/Android)" as KotlinApp
+}
+
+package "System Services" {
+  rectangle "Firebase Telemetry" as Firebase {
+    [Analytics]
+    [Crashlytics]
+    [Performance Monitoring]
+  }
+
+  rectangle "BigQuery Data Warehouse" as BigQuery
+}
+
+package "Desktop Application" {
+  rectangle "Looker BI & Visualization" as Looker
+}
+
+' Relationships
+User --> FlutterApp : Uses
+User --> KotlinApp : Uses
+
+FlutterApp --> Firebase : Sends events, crashes,\nperf data
+KotlinApp --> Firebase : Sends events, crashes,\nperf data
+
+Firebase --> BigQuery : Exports raw event data
+BigQuery --> Looker : Data source connection
+
+' Developer interactions
+Dev --> FlutterApp : Builds, tests,\nreleases
+Dev --> KotlinApp : Builds, tests,\nreleases
+Dev --> Firebase : Monitors crashes,\nperformance
+
+' Analytics persona interactions
+Analyst --> Looker : Consumes dashboards,\ninsights, KPIs
+
+@enduml

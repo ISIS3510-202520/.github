@@ -1,5 +1,5 @@
 @startuml
-title Journaling App - Deployment Diagram (Flutter + Kotlin)
+title Deployment Diagram - Here4U
 
 node "User Devices" as User {
   node "Android Mobile Device" {

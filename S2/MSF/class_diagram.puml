@@ -1,5 +1,7 @@
 @startuml
 
+title Class Diagram - Here4U
+
 ' ========= ENTITIES =========
 
 class User {
